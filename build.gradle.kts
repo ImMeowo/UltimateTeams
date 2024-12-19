@@ -35,7 +35,7 @@ tasks {
 
 dependencies {
     // Kotlin
-    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:1.8.0")
+    compileOnly("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
 
     compileOnly("org.projectlombok:lombok:1.18.34")
     annotationProcessor("org.projectlombok:lombok:1.18.34")

@@ -10,6 +10,14 @@
         <module name="dev.xf3d3.UltimateTeams.test" />
         <module name="dev.xf3d3.UltimateTeams.main" />
       </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.34/lombok-1.18.34.jar" />
+        </processorPath>
+        <module name="dev.xf3d3.UltimateTeams.main" />
+        <module name="Meowo's Plugins.UltimateTeams.test" />
+      </profile>
     </annotationProcessing>
   </component>
 </project>

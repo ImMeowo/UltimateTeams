@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.UUID;
 
-@CommandAlias("teamadmin|ta")
+@CommandAlias("clanadmin|ca")
 public class TeamAdmin extends BaseCommand {
 
     private final FileConfiguration messagesConfig;

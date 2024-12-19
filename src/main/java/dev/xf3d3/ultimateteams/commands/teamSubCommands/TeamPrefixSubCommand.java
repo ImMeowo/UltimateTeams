@@ -53,13 +53,16 @@ public class TeamPrefixSubCommand {
             return;
         }
 
-        final String prefixWithoutColorCodes = prefix.replaceAll("&[0-9a-fA-Fk-oK-OrR]", "");
+        final String regex = "&(?:[0-9a-fA-Fk-oK-OrR]|x(?:&[0-9a-fA-F]){6})";
+        final String prefixWithoutColorCodes = prefix.replaceAll(regex, "");
+        String newprefix;
+        newprefix = prefix;
         if (plugin.getSettings().isIgnoreColorCodes())
             prefix = prefixWithoutColorCodes;
 
         if (prefix.length() >= MIN_CHAR_LIMIT && prefix.length() <= MAX_CHAR_LIMIT) {
             Team playerTeam = plugin.getTeamStorageUtil().findTeamByOwner(player);
-            plugin.getTeamStorageUtil().updatePrefix(player, prefix);
+            plugin.getTeamStorageUtil().updatePrefix(player, newprefix);
 
             String prefixConfirmation = Utils.Color(messagesConfig.getString("team-prefix-change-successful")).replace("%TEAMPREFIX%", playerTeam.getTeamPrefix());
             sender.sendMessage(prefixConfirmation);

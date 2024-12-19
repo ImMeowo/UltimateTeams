@@ -17,7 +17,7 @@ import java.util.UUID;
 import java.util.logging.Logger;
 
 @SuppressWarnings("unused")
-@CommandAlias("tc|teamchat|tchat")
+@CommandAlias("cc|clanchat|cchat")
 public class TeamChatCommand extends BaseCommand {
     private final FileConfiguration messagesConfig;
     private final Logger logger;

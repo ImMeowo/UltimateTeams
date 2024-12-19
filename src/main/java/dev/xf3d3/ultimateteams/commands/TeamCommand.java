@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 @SuppressWarnings("unused")
-@CommandAlias("team")
+@CommandAlias("clan")
 @CommandPermission("ultimateteams.player")
 public class TeamCommand extends BaseCommand {
     private final FileConfiguration messagesConfig;

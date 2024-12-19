@@ -83,7 +83,7 @@ public class TeamCreateSubCommand {
 
         if (name.length() < MIN_CHAR_LIMIT) {
             player.sendMessage(Utils.Color(messagesConfig.getString("team-name-too-short").replace("%CHARMIN%", Integer.toString(MIN_CHAR_LIMIT))));
-        } else if (name.length() > MAX_CHAR_LIMIT) {
+        } else if (name.length() > 16) {
             player.sendMessage(Utils.Color(messagesConfig.getString("team-name-too-long").replace("%CHARMAX%", Integer.toString(MAX_CHAR_LIMIT))));
         } else {
             if (!storageUtil.isTeamExisting(player)) {
